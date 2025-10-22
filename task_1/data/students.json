@@ -1,0 +1,12 @@
+[
+  {"id": 1, "birthday": "2003-05-15", "name": "John Doe", "room": 1, "sex": "M"},
+  {"id": 2, "birthday": "2004-02-20", "name": "Jane Smith", "room": 1, "sex": "F"},
+  {"id": 3, "birthday": "2002-11-30", "name": "Peter Jones", "room": 1, "sex": "M"},
+  {"id": 4, "birthday": "2005-01-10", "name": "Emily Brown", "room": 2, "sex": "F"},
+  {"id": 5, "birthday": "2005-08-25", "name": "Michael Wilson", "room": 2, "sex": "M"},
+  {"id": 6, "birthday": "2000-07-07", "name": "Jessica Garcia", "room": 3, "sex": "F"},
+  {"id": 7, "birthday": "1998-09-01", "name": "David Miller", "room": 3, "sex": "M"},
+  {"id": 8, "birthday": "2006-03-12", "name": "Sarah Davis", "room": 4, "sex": "F"},
+  {"id": 9, "birthday": "2006-04-18", "name": "Chris Rodriguez", "room": 4, "sex": "M"},
+  {"id": 10, "birthday": "2005-12-05", "name": "Laura Martinez", "room": 4, "sex": "F"}
+]
