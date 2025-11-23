@@ -1,5 +1,5 @@
 DB_CONFIG = {
-    'dbname': 'postgres',       # Имя вашей базы данных
+    'dbname': 'postgres',   # Имя вашей базы данных
     'user': 'postgres',     # Ваше имя пользователя
     'password': 'postgres', # Ваш пароль
     'host': 'localhost',    # Обычно 'localhost'

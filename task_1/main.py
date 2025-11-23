@@ -1,10 +1,10 @@
-import argparse
+import argparse # легко принимает аргументы из терминала при запуске
 import json
-import psycopg2
+import psycopg2 # связь Python & PostgreSQL
 import psycopg2.extras # Важно для словарей и быстрой вставки
-import sys
+import sys # работа с интерпретатором
 import xml.etree.ElementTree as ET
-from typing import List, Dict, Any
+from typing import List, Dict, Any # type hinting
 from config import DB_CONFIG
 
 class DataLoader:
