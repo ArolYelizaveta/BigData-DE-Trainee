@@ -33,7 +33,7 @@ class DataLoader:
                 else:
                     raise ValueError(f"Неизвестное имя таблицы: {table_name}")
 
-                # Используем execute_batch для быстрой массовой вставки
+                #  execute_batch -- для быстрой массовой вставки
                 psycopg2.extras.execute_batch(cursor, query, records)
                 self.conn.commit()
                 print(f"Успешно загружено {len(records)} записей в таблицу {table_name}.")
@@ -51,7 +51,7 @@ class QueryRunner:
         """Вспомогательный метод для выполнения запроса и возврата результата в виде списка словарей."""
         results = []
         try:
-            # Используем DictCursor, чтобы получать строки как словари (ключ: значение)
+            #  DictCursor, чтобы получать строки как словари (ключ: значение)
             with self.conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cursor:
                 cursor.execute(query)
                 results = [dict(row) for row in cursor.fetchall()]
@@ -148,12 +148,10 @@ def main():
         conn = psycopg2.connect(**DB_CONFIG)
         print("Соединение с базой данных установлено.")
 
-        # 1. Загрузка данных
         loader = DataLoader(conn)
         loader.load_data(args.rooms, 'rooms')
         loader.load_data(args.students, 'students')
 
-        # 2. Выполнение запросов
         runner = QueryRunner(conn)
         results = {
             "rooms_with_student_count": runner.get_rooms_with_student_count(),
@@ -162,7 +160,6 @@ def main():
             "rooms_with_mixed_sexes": runner.get_rooms_with_mixed_sexes()
         }
 
-        # 3. Экспорт результатов
         if args.format == 'json':
             output = DataExporter.to_json(results)
         else: # xml
